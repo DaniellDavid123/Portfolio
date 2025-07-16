@@ -18,4 +18,5 @@ Welcome to my portfolio website! This is where I showcase my skills, projects, a
 
 ## 🌐 Live Site
 
-[View Portfolio](https://danielldavid123.github.io/Portfolio/)
+[View Portfolio]
+(https://danielldavid123.github.io/Portfolio/)
