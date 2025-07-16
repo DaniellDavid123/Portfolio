@@ -104,3 +104,69 @@ document.querySelectorAll('.portfolio-card').forEach(card => {
 document.getElementById('closePortfolioPopup').addEventListener('click', () => {
   document.getElementById('portfolioPopup').classList.remove('show');
 });
+
+// light/dark mode toggle
+const toggleBtn = document.getElementById('themeToggle');
+const body = document.body;
+
+// Check for saved preference
+if (localStorage.getItem('theme') === 'light') {
+  body.classList.add('light-mode');
+  toggleBtn.textContent = '🌑';
+}
+
+toggleBtn.addEventListener('click', () => {
+  body.classList.toggle('light-mode');
+  
+  const isLight = body.classList.contains('light-mode');
+  toggleBtn.textContent = isLight ? '🌑' : '🌙';
+  
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
+// animation on scroll
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section, .skills-section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show"); // 👈 this line makes it re-animate
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  sections.forEach((section) => {
+    section.classList.add("section-animate");
+    observer.observe(section);
+  });
+});
+
+// about section animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show"); // 👈 this line is 🔑
+    }
+  });
+}, {
+  threshold: 0.15
+});
+// Randomize skill card positions and rotations
+const skillCards = document.querySelectorAll(".skill-card");
+skillCards.forEach(card => {
+  const randX = Math.random(); // between 0 and 1
+  const randY = Math.random();
+  const randRot = Math.random();
+  card.style.setProperty('--random-x', randX);
+  card.style.setProperty('--random-y', randY);
+  card.style.setProperty('--random-rotate', randRot);
+});
+
+// animation for portfolio section

@@ -13,7 +13,9 @@
 <body>
 
   <!-- Navigation Bar -->
+   
   <nav class="navbar">
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">🌙</button> <!-- Dark mode/Light Mode -->
     <a href="#home" class="brand">Daniell David</a>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
@@ -23,27 +25,41 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="https://github.com/DaniellDavid123" class="github-icon" target="_blank" aria-label="GitHub">
-      <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.37-3.37-1.37-.45-1.16-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.52 1.05 1.52 1.05 .89 1.56 2.34 1.11 2.91 .85.09-.66.35-1.11.64-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.04 1.03-2.76-.1-.25-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.16 9.16 0 0112 7.09c.85.004 1.71.12 2.5.34 1.9-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.71.64.72 1.03 1.64 1.03 2.76 0 3.94-2.34 4.81-4.57 5.07.36.32.68.95.68 1.91 0 1.37-.01 2.48-.01 2.82 0 .26.18.58.69.48C19.13 20.58 22 16.76 22 12.26 22 6.58 17.52 2 12 2Z"/></svg>
-    </a>
+  <a href="https://github.com/DaniellDavid123" 
+   class="github-icon" 
+   target="_blank" 
+   aria-label="GitHub">
+  <!-- github logo adapt to l/d mode-->
+   <svg id="githubIcon" xmlns="http://www.w3.org/2000/svg" 
+       viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+    <path d="M12 .5C5.6.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.5 1.1 1.5 1.1.9 1.5 2.3 1.1 2.9.9.1-.7.4-1.1.7-1.3-2.6-.3-5.4-1.3-5.4-5.7 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.4.1-2.9 0 0 1-.3 3.3 1.2a11.6 11.6 0 0 1 6 0C17.5 6.2 18.5 6.5 18.5 6.5c.6 1.5.2 2.6.1 2.9.8.9 1.2 2 1.2 3.3 0 4.4-2.8 5.4-5.4 5.7.4.3.8 1 .8 2v3c0 .3.2.7.8.6A10.6 10.6 0 0 0 23.5 12C23.5 5.6 18.4.5 12 .5z"/>
+  </svg>
+</a>
+
+  
+</a> <!-- Github logo adapt to t he l/d mode -->
     <div class="nav-toggle">&#9776;</div>
   </nav>
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-  <div class="hero-content">
-    <div class="hero-text">
+  
+  <!-- Header Section -->
+
+  <section class="header" id="home">
+  <div class="header-content">
+    <div class="header-text">
       <span class="hello">Hello World, I'm</span>
       <h1 class="name">Daniell David P. Nava</h1>
       <span class="typed-role"><span id="typed"></span></span>
       <p class="welcome">Welcome to my Personal Website.</p>
     </div>
-    <div class="hero-avatar-glow">
-      <img src="images/Profile.jpg" alt="Profile avatar" class="hero-avatar">
+    <div class="header-avatar-glow">
+      <img src="images/Profile.jpg" alt="Profile avatar" class="header-avatar">
     </div>
   </div>
+  </section>
   
-</section>
   <!-- About Section -->
   <section class="about" id="about">
+    
     <div class="about-container"><img src="images/Profile2.jpg" alt="Profile avatar" class="about-img">
       <div class="about-avatar">
         
@@ -54,6 +70,7 @@
         </p>
       </div>
     </div>
+
     <!-- Skills Section -->
     <div class="skills-section" id="skills">
   <h3>Skills</h3>
@@ -71,7 +88,7 @@
       <div class="skill-card react"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/><span>ReactJS</span></div>
     </div>
   </div>
-    
+    <!-- Skills Section -->
     <div class="skills-category">
     <h3>Tools</h3>
     <div class="skills-grid">
@@ -92,6 +109,15 @@
         <span>VS Code</span>
       </div>
     </div>
+    <div class="skills-category">
+    <!-- Certifications -->
+      <h3>Certificates</h3>
+  <div class="certificate-card empty">
+  <span>No certificates yet, but I’m currently working on it.</span>
+</div>
+    <!-- Add more certificates as you collect 'em -->
+  </div>
+</div>
   </div>
 </section>
   
@@ -104,6 +130,7 @@
           
   <!-- Portfolio Section -->
   <section class="portfolio" id="portfolio">
+    <div class="portfolio-card section-animate"></div>
     <h2>Project</h2>
     <p class="subtitle">Explore the projects I’ve worked on so far</p>
     <div class="portfolio-grid">
@@ -116,6 +143,7 @@
         </div>
       </div>
       <div class="portfolio-card">
+        <div class="portfolio-card section-animate"></div>
         <img src="images/Smart-Care.png" alt="Smart Care"> 
         <div class="portfolio-body">
           <h4>SmartCare</h4>
@@ -124,8 +152,10 @@
         </div>
       </div>
       <div class="portfolio-card">
+        <div class="portfolio-card section-animate"></div>
         <img src="thumb3.png" alt="Lorem ipsum dolor sit amet">
         <div class="portfolio-body">
+          <div class="portfolio-card section-animate"></div>
           <h4>Lorem ipsum dolor sit amet</h4>
           <p>Lorem ipsum dolor sit amet.</p>
           <span class="tech-used">Lorem ipsum, dolor sit amet.</span>
@@ -136,18 +166,21 @@
       <!-- Add more project cards as desired -->
     </div>
   </section>
+ 
   <!-- Portfolio Popup -->
   <div class="portfolio-popup" id="portfolioPopup">
   <span class="popup-close" id="closePortfolioPopup">&times;</span>
   <img src="" alt="Project Preview" id="popupImage">
 </div>
   <section class="contact" id="contact">
+    <!-- Contact Information -->
     <h2>Contact</h2>
     <div class="contact-info">
       <p>Email: <a href="mailto:ndanielldavid@gmail.com">ndanielldavid@gmail.com</a></p>
       <p>Facebook: <a href="https://www.facebook.com/unmotivated.mcLovin" target="_blank">https://www.facebook.com/unmotivated.mcLovin</a></p>
       <p>GitHub: <a href="https://github.com/DaniellDavid123" target="_blank">github.com/DaniellDavid123</a></p>
-      <!-- Add more contact methods as you like -->
+      
+      <!-- Add more contact methods  -->
     </div>
   </section>
   <script src="script.js"></script>
