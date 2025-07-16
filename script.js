@@ -89,3 +89,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+// pop up for portfolio images
+document.querySelectorAll('.portfolio-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const imgSrc = card.querySelector('img').getAttribute('src');
+    const popupImage = document.getElementById('popupImage');
+    popupImage.setAttribute('src', imgSrc);
+
+    const popup = document.getElementById('portfolioPopup');
+    popup.classList.add('show');
+  });
+});
+
+document.getElementById('closePortfolioPopup').addEventListener('click', () => {
+  document.getElementById('portfolioPopup').classList.remove('show');
+});
